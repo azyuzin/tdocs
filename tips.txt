@@ -1,0 +1,67 @@
+********* install pip *********
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install python-pip
+
+
+********* install python packets with pip *********
+sudo -H pip install virtualenvwrapper
+sudo pip install pyopenssl ndg-httpsclient pyasn1
+sudo pip install paramiko
+OR
+sudo pip install -e git+https://github.com/jonathanslenders/textfsm.git#egg=gtextfsm
+sudo pip install -e git+https://github.com/datacenter/cobra.git#egg=acicobra
+OR
+sudo pip install https://pypi.python.org/packages/98/12/edfdccf3d968ffbb94ac8e48b3172395b6902eb4265bded0b0d07a1652f3/gtextfsm-0.2.1.tar.gz
+sudo pip install https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/textfsm/textfsm-0.2.1.tar.gz 
+
+********* install with apt-get *********
+sudo apt-get install git
+sudo apt-get install python-dev
+# in CentOS - sudo yum install python-devel
+
+
+********* add repo, update and install  ********
+sudo apt-add-repository ppa:ansible/ansible
+sudo apt-get update
+sudo apt-get install ansible
+sudo pip install ansible
+
+
+
+
+********* download, unpack and install python lib wih wget ******
+ll
+mkdir gtextfsm-000
+ll
+cd gtextfsm-000/
+wget https://pypi.python.org/packages/98/12/edfdccf3d968ffbb94ac8e48b3172395b6902eb4265bded0b0d07a1652f3/gtextfsm-0.2.1.tar.gz#md5=b2834f99e7b58d9060c743656f6560dc
+ll
+tar -xf gtextfsm-0.2.1.tar.gz
+cd gtextfsm-0.2.1/
+python3 ./setup.py
+
+********* download, unpack and install python lib with curl ******
+curl -O https://bootstrap.pypa.io/ez_setup.py
+ll
+sudo python ez_setup.py --insecure
+
+
+******** git ********
+
+mkdir git-dir
+cd git-dir/
+ll
+git init
+git config --global user.name azyuzin
+git config --global user.email alexander.a.zyuzin
+git clone https://github.com/azyuzin/test01.git
+ll
+cd test01/
+ll
+python test001.py 
+vi test-arv.py
+git add .
+git commit
+git push
+
